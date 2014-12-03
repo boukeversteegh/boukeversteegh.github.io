@@ -1,0 +1,175 @@
+<html>
+	<head>
+		<style>
+			
+			@-webkit-keyframes spin-back {
+				from {background-position: -164px 0 }
+				to {background-position: 92px 0 }
+			}
+			body {
+				background: black;
+			}
+			.earth {
+				width: 128px;
+				height: 128px;
+				border-radius: 50%;
+				/*border: thin solid black;*/
+				position: relative;
+				left: 200px;
+				top: 50px;
+				overflow: hidden;
+				box-shadow: 0 0 126px rgba(0, 93, 207, 1),2px 0 11px rgba(33, 196, 249, 0.7);
+				/*background-color: #00AAEE;*/
+			}
+			.earth > div {
+				position: absolute;
+				top: 0; left: auto; right: 0; bottom: 0;
+			}
+			.earth .spin {
+				-webkit-animation-duration: 10s;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-iteration-count: infinite;
+				background: url('earth.png') repeat-x 0 0;
+				background-size: auto 100%;
+			}
+
+			/*.spin:nth-child(odd) {
+				background-color: red;
+			}
+			.spin:nth-child(even) {
+				background-color: blue;
+			}*/
+			/*.eart*/
+			.earth .back {
+				-webkit-animation-name: spin-back;
+				opacity: 0.5;
+				-webkit-transform:scaleX(-1);
+				-moz-transform:scaleX(-1);
+				-ms-transform:scaleX(-1);
+				-o-transform:scaleX(-1);
+				transform:scaleX(-1);
+			}
+			
+			@-webkit-keyframes spin-front-l3 {
+				from {background-position: 24px 0 }
+				to {background-position: 88px 0 }
+			}
+			.earth .front-l3 {
+				-webkit-animation-name: spin-front-l3;
+				width: 6.25%;
+				left: 0;
+				background-size: 64px 100%;
+				background-position: 24px 0;
+			}
+			@-webkit-keyframes spin-front-l2 {
+				from {background-position: 32px 0 }
+				to {background-position: 160px 0 }
+			}
+			.earth .front-l2 {
+				-webkit-animation-name: spin-front-l2;
+				width: 6.25%;
+				left: 6.25%;
+				background-size: 128px 100%;
+				background-position: 32px 0;
+			}
+			@-webkit-keyframes spin-front-l1 {
+				from {background-position: 190px 0 }
+				to {background-position: 350px 0 }
+			}
+			.earth .front-l1 {
+				-webkit-animation-name: spin-front-l1;
+				left: 12.5%;
+				width: 12.5%;
+				background-size: 160px 100%;
+				background-position: 190px 0;
+			}
+
+			@-webkit-keyframes spin-front-l0 {
+				from {background-position: 208px 0 }
+				to {background-position: 400px 0 }
+			}
+			.earth .front-l0 {
+				-webkit-animation-name: spin-front-l0;
+				left: 25%;
+				width: 12.5%;
+				background-size: 192px 100%;
+				background-position: 208px 0;
+			}
+			
+			@-webkit-keyframes spin-front {
+				from {background-position: 0 0 }
+				to {background-position: 256px 0 }
+			}
+
+			.earth .front {
+				-webkit-animation-name: spin-front;
+				right: 37.5%;
+				left: 37.5%;
+			}
+			@-webkit-keyframes spin-front-r0 {
+				from {background-position: 168px 0 }
+				to {background-position: 360px 0 } /* + background-width */
+			}
+			.earth .front-r0 {
+				-webkit-animation-name: spin-front-r0;
+				right: 25%;
+				width: 12.5%;
+				background-size: 192px 100%;
+				background-position: 168pxpx 0;
+			}
+			@-webkit-keyframes spin-front-r1 {
+				from {background-position: 126px 0 }
+				to {background-position: 286px 0 }
+			}
+			.earth .front-r1 {
+				-webkit-animation-name: spin-front-r1;
+				right: 12.5%;
+				width: 12.5%;
+				background-size: 160px 100%;
+				background-position: 126px 0;
+			}
+			@-webkit-keyframes spin-front-r2 {
+				from {background-position: 88px 0 }
+				to {background-position: 216px 0 }
+			}
+			.earth .front-r2 {
+				-webkit-animation-name: spin-front-r2;
+				width: 6.25%;
+				right: 6.25%;
+				background-size: 128px 100%;
+				background-position: 88px 0;
+			}
+			@-webkit-keyframes spin-front-r3 {
+				from {background-position: 168px 0 }
+				to {background-position: 232px 0 }
+			}
+			.earth .front-r3 {
+				-webkit-animation-name: spin-front-r3;
+				width: 6.25%;
+				background-size: 64px 100%;
+				background-position: 168px 0;
+			}
+			.earth .shadow {
+				box-shadow: 16px 0 32px black inset, 0px 0 34px rgba(33, 196, 249, 0.8) inset;
+				border-radius: 50%;
+				z-index: 2;
+				left: 0;
+			}
+		</style>	
+	</head>
+	<body>
+		<div class="earth">
+			<div class="spin back"></div>
+			<div class="spin front-l3"></div>
+			<div class="spin front-l2"></div>
+			<div class="spin front-l1"></div>
+			<div class="spin front-l0"></div>
+			<div class="spin front"></div>
+			<div class="spin front-r0"></div>
+			<div class="spin front-r1"></div>
+			<div class="spin front-r2"></div>
+			<div class="spin front-r3"></div>
+			<div class="shadow"></div>
+		</div>
+	</body>
+</html>
